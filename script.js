@@ -198,13 +198,13 @@
             isValid = false;
           }
         } else if (field.type === 'tel' && field.value) {
-          const phoneRegex = /^[\d\s\+\-\(\)]{10,20}$/;
+          const phoneRegex = /^[\d\s+\-()]{10,20}$/;
           if (!phoneRegex.test(field.value)) {
             this.showError(field, 'Введите корректный номер телефона');
             isValid = false;
           }
         } else if (field.name && field.name.toLowerCase().includes('name') && field.value) {
-          const nameRegex = /^[a-zA-ZА-Яа-яЁёÀ-ÿ\s\-']{2,50}$/;
+          const nameRegex = /^[a-zA-ZА-Яа-яЁёÀ-ÿ\s-']{2,50}$/;
           if (!nameRegex.test(field.value)) {
             this.showError(field, 'Имя должно содержать от 2 до 50 символов и только буквы');
             isValid = false;
@@ -267,7 +267,7 @@
 
   class ScrollAnimations {
     constructor() {
-      this.elements = document.querySelectorAll('.card, .btn, img, h1, h2, h3, p, .hero-section');
+      this.elements = document.querySelectorAll('.card, .btn, .c-button, img, h1, h2, h3, p, .hero-section');
       this.init();
     }
 

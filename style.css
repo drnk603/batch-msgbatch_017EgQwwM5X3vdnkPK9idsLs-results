@@ -1057,9 +1057,7 @@ footer a:hover {
   color: var(--color-accent-hover);
 }
 
-.bg-dark {
-  background-color: var(--color-neutral-black);
-}
+
 
 .border-top {
   border-top: 1px solid var(--color-neutral-dark);
@@ -1459,5 +1457,27 @@ textarea {
 @media (min-width: 1200px) {
   .container {
     max-width: 1280px;
+  }
+}
+
+/* AUTO-FIX: bg-dark improved contrast */
+.bg-dark > * {
+  color:white!important;
+}
+
+/* AUTO-INJECTED: g-4 layout fix */
+.g-4 > * {
+  width: 100%;
+}
+
+/* --- AUTO-INJECTED: AOS mobile/tablet override --- */
+@media (max-width: 1024px) {
+  [data-aos="fade-left"],
+  [data-aos="fade-right"] {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+  }
+  .c-logo__img {
+    display: none!important;
   }
 }
